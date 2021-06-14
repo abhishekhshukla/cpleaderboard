@@ -7,7 +7,7 @@ const app = express();
 
 const {getHomePage} = require('./routes/index-problem');
 //const {addProblem} = require('./routes/problem');
-const {addProblemPage, addProblem} = require('./routes/problem');
+const {addProblemPage, addProblem} = require('./routes/problem.js');
 const port = 5000;
 
 // create connection to database
@@ -52,8 +52,8 @@ app.use(fileUpload()); // configure fileupload
 // 			if(err)	throw err;
 // 			console.log(result);
 // 		})
-// 	})
-// })
+//) 	})
+// }
 
 app.get('/', getHomePage);
 app.get('/add', addProblemPage);
